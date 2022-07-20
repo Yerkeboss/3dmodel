@@ -31,6 +31,8 @@ function init() {
   raycaster = new THREE.Raycaster();
   mouse = new THREE.Vector2()
 
+  
+
   new RGBELoader()
     .setDataType(THREE.UnsignedByteType)
     .setPath('https://threejs.org/examples/textures/equirectangular/')
