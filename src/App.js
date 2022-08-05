@@ -13,11 +13,6 @@ import * as THREE from 'three';
 
 
 
-
-var camera;
-camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
-camera.position.set(100, 100, 100);
-
 export default function App() {
   return (
     <Canvas camera position = {{position: [-100,-100,-100], zoom:1}}>
@@ -32,7 +27,6 @@ export default function App() {
         <Tree1/>
         <Tree2/>
         <Tree3/>
-        {/* <Test/> */}
       </Suspense>
     </Canvas>
   );
