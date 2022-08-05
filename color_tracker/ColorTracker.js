@@ -380,12 +380,25 @@
     // Default colors
     //===================
   
-    tracking.ColorTracker.registerColor('blue', function(r, g, b) {
+    tracking.ColorTracker.registerColor('cyan', function(r, g, b) {
       var thresholdGreen = 50,
         thresholdBlue = 70,
         dx = r - 0,
         dy = g - 255,
         dz = b - 255;
+  
+      if ((g - r) >= thresholdGreen && (b - r) >= thresholdBlue) {
+        return true;
+      }
+      return dx * dx + dy * dy + dz * dz < 6400;
+    });
+
+    tracking.ColorTracker.registerColor('blue', function(r, g, b) {
+      var thresholdGreen = 50,
+        thresholdBlue = 70,
+        dx = r - 33,
+        dy = g - 99,
+        dz = b - 137;
   
       if ((g - r) >= thresholdGreen && (b - r) >= thresholdBlue) {
         return true;
